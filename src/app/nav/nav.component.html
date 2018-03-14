@@ -1,0 +1,20 @@
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" routerLink="/">My Shopping Cart</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="#">Men Clothes</a></li>
+      <li><a href="#">Electronics</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right text-warning">
+      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li *ngIf="logged==false; else Logout"><a routerLink="login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        <ng-template #Logout>
+            <li ><a routerLink="/logout"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+        </ng-template>
+      <li><a routerLink="/checkout"><span class="glyphicon glyphicon-shopping-cart"></span> &nbsp; {{totalPrice}} </a></li>
+    </ul>
+  </div>
+</nav>

@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <!-- <a *ngIf="true"
+        (click)="editItem()"  class="btn btn-success btn-md active" role="button" aria-pressed="true">Edit</a> -->
+      <h3>{{currentItem.name}}</h3>
+      <img [src]="currentItem.url" alt="Bird" width="350" height="350">
+    <a [routerLink]="['/item', index]">  <h3>{{currentItem.desc}}</h3> </a>
+    <p>{{currentItem.price | currency}}</p>
+      <button (click)="addItem()" class="btn btn-md btn-info">Add to Cart</button>
+    </div>
+  </div>
+  <hr>
+</div>

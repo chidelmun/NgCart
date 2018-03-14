@@ -1,0 +1,13 @@
+<div >
+  <hr>
+
+  <div class="row">
+    <div *ngFor="let item of Items; let i = index" class="col-md-3" appBkg>
+      <a *ngIf="true"
+        (click)="editItem(i)"  class="btn btn-success btn-md active" role="button" aria-pressed="true">Edit</a>
+      <app-item [index]="i" [currentItem]="item" (onItemAddedEvent)="addToCart($event)">
+      </app-item>
+    </div>
+  </div>
+</div>
+<hr>

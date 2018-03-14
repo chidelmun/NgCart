@@ -1,0 +1,40 @@
+<div>
+<div class="row">
+  <div class="col-md-4">
+
+  </div>
+  <div class="col-md-4">
+     <p class="text-info" style="margin-left: 150px">Please Login</p>
+     <hr>
+        <div class="form-group">
+          <label for="email">Email address:</label>
+          <input [(ngModel)]="username" type="email" class="form-control" id="email">
+        </div>
+        <div class="form-group">
+          <label for="pwd">Password:</label>
+          <input [(ngModel)]="password" type="password" class="form-control" id="pwd">
+        </div>
+        <div class="checkbox">
+          <label><input type="checkbox"> Remember me</label>
+        </div>
+        <button type="submit" class="btn btn-info" (click)="onLogin()">Submit</button>
+        <hr>
+        <div *ngIf="loading==2" class="alert alert-danger" role="alert">
+            <strong>Oh snap!</strong> Username and Password don't match.
+        </div>
+  </div>
+  <div class="col-md-4">
+
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-4">
+
+  </div>
+  <div class="col-md-4">
+    <app-loading *ngIf="loading==1"></app-loading>
+  </div>
+  <div class="col-md-4">
+
+  </div>
+</div>
